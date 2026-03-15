@@ -10,6 +10,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public function studentGroups(){
+        return $this->belongsToMany(StudentGroup::class, 'student_group_users');
+    }
+
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
