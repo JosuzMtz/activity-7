@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-    //
+    use HasFactory;
+    //^^^ ocupa saber que tiene un factory al parecer ^^^
     protected $fillable = [
         'course_key',
         'title',
